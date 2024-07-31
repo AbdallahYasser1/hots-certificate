@@ -31,7 +31,7 @@ class SendTemplateJob implements ShouldQueue
     public function handle(): void
     {
         $filename = $this->template->template;
-        $subject = $this->template->name;
+        $subject = "You Have Recieved a Certificate";
 
         $templatePath = Storage::disk('public')->path($filename);
 
